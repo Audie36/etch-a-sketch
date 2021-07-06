@@ -16,18 +16,16 @@ buildGrid (size, container);
 
 // Event Listener - Trigger when hover over with mouse
 
-    // Identify each square
+    // Identify each square ✅
 
-        let divButtons = document.querySelectorAll('sketchPixel');
+        let divButtons = container.querySelectorAll('.sketchPixel');
 
 
-    // Color each div gray
+    // Color each div black ✅
 
     divButtons.forEach((div) => {
         
-        div.addEventListener('mouseover', function(event) {
-            event.style.backgroundColor = 'gray';
-        });
+        div.addEventListener('mouseover', blackWhite);
         
     });
 
@@ -49,6 +47,8 @@ function buildGrid (size, container) {
         div.classList.add('sketchPixel')
         container.appendChild(div);
     }
+}
 
-
+function blackWhite(e){
+    e.target.style.backgroundColor = "black";
 }
