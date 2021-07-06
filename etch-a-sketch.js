@@ -23,7 +23,7 @@ function buildGrid (size, container) {
 
     container.setAttribute('style', 'grid-template-rows: repeat('+ size + ', 20px); grid-template-columns: repeat(' + size + ', 20px)');
 
-    // Create Div in Grid
+    // Create Div in Grid ✅
 
     for(i=1; i<=(size*size); i++){
         const div = document.createElement('div');
