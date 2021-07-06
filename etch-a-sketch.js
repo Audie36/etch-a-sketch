@@ -2,19 +2,37 @@
 
 // Initialize Variables
 
-    // Get Container Div
+    // Get Container Div ✅
 
 let container = document.querySelector('#container');
 
-// Grid dimensions
+// Set grid dimensions ✅
 
 let size = 16;
 
-// Build Grid - Inside Container Div
+// Create Grid - Inside Container Div
 
 buildGrid (size, container);
 
-// Build Grid - Custom size
+// Event Listener - Trigger when hover over with mouse
+
+    // Identify each square
+
+        let divButtons = document.querySelectorAll('sketchPixel');
+
+
+    // Color each div gray
+
+    divButtons.forEach((div) => {
+        
+        div.addEventListener('mouseover', function(event) {
+            event.style.backgroundColor = 'gray';
+        });
+        
+    });
+
+
+// Create Grid Function - Custom size ✅
 
 function buildGrid (size, container) {
 
@@ -28,7 +46,9 @@ function buildGrid (size, container) {
     for(i=1; i<=(size*size); i++){
         const div = document.createElement('div');
         div.setAttribute('style', 'border: 1px solid black; height: 19px; width: 19px');
+        div.classList.add('sketchPixel')
         container.appendChild(div);
     }
+
 
 }
