@@ -1,54 +1,92 @@
 
 
-// Initialize Variables
+// INITIALIZE VARIABLES
 
     // Get Container Div ✅
 
 let container = document.querySelector('#container');
 
+    // Get Option Div  ✅
+
+let options = document.querySelector('#options');
+
 // Set grid dimensions ✅
 
 let size = 16;
 
-// Create Grid - Inside Container Div
+// OPTIONS
 
-buildGrid (size, container);
+    // Add Option Buttons
 
-// Event Listener - Trigger when hover over with mouse
+    addOptionButtons(options);
 
-    // Identify each square ✅
+// GRID
 
-        let divButtons = container.querySelectorAll('.sketchPixel');
+    // Create Grid - Inside Container Div
 
+    buildGrid (size, container);
 
-    // Color each div black ✅
+// COLOR
 
-    divButtons.forEach((div) => {
-        
-        div.addEventListener('mouseover', blackWhite);
-        
-    });
+    // Event Listener - Trigger when hover over with mouse 
 
+        // Identify each square ✅
 
-// Create Grid Function - Custom size ✅
-
-function buildGrid (size, container) {
+            let divButtons = container.querySelectorAll('.sketchPixel');
 
 
-    // Change size of container div - depending on size entered ✅
+        // Color each div BLACK ✅
 
-    container.setAttribute('style', 'grid-template-rows: repeat('+ size + ', 20px); grid-template-columns: repeat(' + size + ', 20px)');
+        divButtons.forEach((div) => {
+            
+            div.addEventListener('mouseover', blackWhite);
+            
+        });
 
-    // Create Div in Grid ✅
+// OPTIONS
 
-    for(i=1; i<=(size*size); i++){
-        const div = document.createElement('div');
-        div.setAttribute('style', 'border: 1px solid black; height: 19px; width: 19px');
-        div.classList.add('sketchPixel')
-        container.appendChild(div);
+        // Add Option Buttons
+
+        function addOptionButtons(options){
+
+            // Add Clear Button
+
+            let resetButton = document.createElement('button');
+            resetButton.style.cssText = 'border: 5px solid red; padding: 10px; margin: 40px; border-radius: 7px; color: #FFB845';
+            resetButton.textContent = "Reset";
+            
+            options.appendChild(resetButton);
+
+            return resetButton;
+
+
+        }
+
+// GRID
+
+    // Create Grid Function - Custom size ✅
+
+    function buildGrid (size, container) {
+
+
+        // Change size of container div - depending on size entered ✅
+
+        container.setAttribute('style', 'grid-template-rows: repeat('+ size + ', 20px); grid-template-columns: repeat(' + size + ', 20px)');
+
+        // Create Div in Grid ✅
+
+        for(i=1; i<=(size*size); i++){
+            const div = document.createElement('div');
+            div.setAttribute('style', 'border: 1px solid black; height: 19px; width: 19px');
+            div.classList.add('sketchPixel')
+            container.appendChild(div);
+        }
     }
-}
 
-function blackWhite(e){
-    e.target.style.backgroundColor = "black";
-}
+// COLOR
+    
+    // Black ✅
+
+        function blackWhite(e){
+            e.target.style.backgroundColor = "black";
+        }
