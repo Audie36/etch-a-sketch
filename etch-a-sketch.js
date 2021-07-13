@@ -20,6 +20,11 @@ let size = 16;
 
     addOptionButtons(options);
 
+// ETCH-A-SKETCH IMAGE
+
+
+
+
 // GRID
 
     // Create Grid - Inside Container Div

@@ -2,7 +2,7 @@ body{
     justify-content: center;
 }
 #options{
-    display: flex;
+    display: grid;
     margin: auto;
     justify-items: center;
 }
