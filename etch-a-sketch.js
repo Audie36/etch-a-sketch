@@ -54,18 +54,19 @@ let size = 16;
 
         function addOptionButtons(options){
 
-            // Add Clear Button
+            // Add Clear Button ✅
 
             let resetButton = document.createElement('button');
-            resetButton.style.cssText = 'border: 5px solid red; padding: 10px; margin: 40px; border-radius: 7px; color: #FFB845';
+            resetButton.classList.add('button');
             resetButton.textContent = "Reset";
             
             options.appendChild(resetButton);
 
             return resetButton;
 
-
         }
+
+
 
 // GRID
 
