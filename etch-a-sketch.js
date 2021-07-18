@@ -43,6 +43,7 @@ let size = 16;
 
         resetButton.addEventListener("click", promptForGridSize);
 
+       
         /* function displayConsole(){
 
             console.log("Reset button clicked");
@@ -53,20 +54,20 @@ let size = 16;
 
     function promptForGridSize(){
 
-        // Create Pop up Message - Attributes
+        // Create Pop up Message on Top of Screen
 
         let prompt = document.createElement('div');
             
-        prompt.setAttribute('style', 'background-color: #fefefe; margin: auto; padding: 20px; border: 1px solid #888; width: 80%; border-radius: 5px');
+        prompt.setAttribute('style', 'background-color: #fefefe; margin: auto; padding: 20px; border: 1px solid #888;  border-radius: 5px; z-index: 2; position: absolute; width: 80%');
         prompt.setAttribute('id', 'promptMessage');
         prompt.textContent = "What do you want to change the grid size to?"
         backgroundDiv.insertBefore(prompt, container);
 
         // Gray out Background
 
-        backgroundDiv.setAttribute('style', 'display: block; position: fixed; z-index: 1; width: 100%; height: 100%; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4)');
+        backgroundDiv.setAttribute('style', 'display: block; position: absolute; z-index: 1; width: 100%; height: 100%; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4)');
 
-        // Display Pop Up Message
+        // Close prompt when user clicks outside it
 
 
     }
