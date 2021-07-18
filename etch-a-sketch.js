@@ -2,6 +2,10 @@
 
 // INITIALIZE VARIABLES
 
+    // Get Body Element
+
+let body = document.querySelector('body');
+
     // Get Container Div ✅
 
 let container = document.querySelector('#container');
@@ -9,6 +13,10 @@ let container = document.querySelector('#container');
     // Get Option Div  ✅
 
 let options = document.querySelector('#options');
+
+// Set Background
+
+let backgroundDiv = document.querySelector('#background');
 
 // Set grid dimensions ✅
 
@@ -23,13 +31,45 @@ let size = 16;
 // ETCH-A-SKETCH IMAGE
 
 
-
-
 // GRID
 
     // Create Grid - Inside Container Div
 
     buildGrid (size, container);
+
+    // MAKE OPTION CLICKABLE
+
+        // Clear Button - We're still able to use the resetButton variable because we returned it from addOptions function
+
+        resetButton.addEventListener("click", promptForGridSize);
+
+        /* function displayConsole(){
+
+            console.log("Reset button clicked");
+
+        */
+
+    // RESET Prompt for Size
+
+    function promptForGridSize(){
+
+        // Create Pop up Message - Attributes
+
+        let prompt = document.createElement('div');
+            
+        prompt.setAttribute('style', 'display: block; positin: fixed; justify-content: center; border: 1px solid red; border-radius: 7px; z-index: 1; background-color: #fefefe; width: 50%');
+        prompt.setAttribute('id', 'promptMessage');
+        prompt.textContent = "What do you want to change the grid size to?"
+        backgroundDiv.insertBefore(prompt, container);
+
+        // Gray out Background
+
+        backgroundDiv.setAttribute('style', 'display: block; position: fixed; z-index: 1; width: 100%; height: 100%; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4)');
+
+        // Display Pop Up Message
+
+
+    }
 
 // COLOR
 
@@ -54,17 +94,20 @@ let size = 16;
 
         function addOptionButtons(options){
 
-            // Add Clear Button ✅
+            // Add RESET Button ✅
 
-            let resetButton = document.createElement('button');
+            const resetButton = document.createElement('button');
             resetButton.classList.add('button');
+            resetButton.setAttribute('id', 'resetButton');
             resetButton.textContent = "Reset";
+
             
             options.appendChild(resetButton);
 
             return resetButton;
 
         }
+
 
 
 
@@ -77,7 +120,13 @@ let size = 16;
 
         // Change size of container div - depending on size entered ✅
 
+        // container.setAttribute('style', 'grid-template-rows: repeat('+ size + ', 20px); grid-template-columns: repeat(' + size + ', 20px)');
+
+
+        // Custom Grid - Depending on specified size
+
         container.setAttribute('style', 'grid-template-rows: repeat('+ size + ', 20px); grid-template-columns: repeat(' + size + ', 20px)');
+
 
         // Create Div in Grid ✅
 
@@ -88,6 +137,10 @@ let size = 16;
             container.appendChild(div);
         }
     }
+
+// RESET - CHANGE GRID SIZE
+
+
 
 // COLOR
     
