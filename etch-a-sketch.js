@@ -67,7 +67,14 @@ let size = 16;
         prompt.textContent = "What do you want to change the grid size to?"
         backgroundDiv.insertBefore(prompt, container);
 
-        
+        // Add input space for new Grid Size
+
+        let inputGridSize = document.createElement('input');
+
+        inputGridSize.setAttribute('style', 'border-radius: 5px; border: 1px solid black');
+
+        prompt.appendChild(inputGridSize);
+
 
 
 
