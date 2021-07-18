@@ -72,6 +72,8 @@ let size = 16;
         let inputGridSize = document.createElement('input');
 
         inputGridSize.setAttribute('style', 'border-radius: 5px; border: 1px solid black');
+        inputGridSize.setAttribute('type', 'text');
+        inputGridSize.setAttribute('placeholder', 'Change grid size');
 
         prompt.appendChild(inputGridSize);
 
