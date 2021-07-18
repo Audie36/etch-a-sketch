@@ -57,7 +57,7 @@ let size = 16;
 
         let prompt = document.createElement('div');
             
-        prompt.setAttribute('style', 'display: block; positin: fixed; justify-content: center; border: 1px solid red; border-radius: 7px; z-index: 1; background-color: #fefefe; width: 50%');
+        prompt.setAttribute('style', 'background-color: #fefefe; margin: auto; padding: 20px; border: 1px solid #888; width: 80%; border-radius: 5px');
         prompt.setAttribute('id', 'promptMessage');
         prompt.textContent = "What do you want to change the grid size to?"
         backgroundDiv.insertBefore(prompt, container);
