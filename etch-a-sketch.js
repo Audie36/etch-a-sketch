@@ -60,24 +60,24 @@ let size = 16;
 
         // Create Pop up Message on Top of Screen
 
-        let prompt = document.createElement('div');
+        const prompt = document.createElement('div');
             
-        prompt.setAttribute('style', 'background-color: #fefefe; margin: auto; padding: 20px; border: 1px solid #888;  border-radius: 5px; z-index: 2; width: 80%');
+        prompt.setAttribute('style', 'display: grid; align-items: center; justify-content: center; background-color: #fefefe; margin: auto; padding: 20px; border: 1px solid #888;  border-radius: 5px; z-index: 2; width: 80%');
         prompt.setAttribute('id', 'promptMessage');
-        prompt.textContent = "What do you want to change the grid size to?"
+        prompt.textContent = "What do you want to change the grid size to?";
         backgroundDiv.insertBefore(prompt, container);
 
         // Add input space for new Grid Size
 
         let inputGridSize = document.createElement('input');
 
-        inputGridSize.setAttribute('style', 'border-radius: 5px; border: 1px solid black');
+        inputGridSize.setAttribute('style', 'border-radius: 5px; border: 1px solid black; margin: 20px; padding: 10px; text-align: center');
         inputGridSize.setAttribute('type', 'text');
-        inputGridSize.setAttribute('placeholder', 'Change grid size');
+        inputGridSize.setAttribute('placeholder', 'Change Grid Size - Ex. "16"');
 
         prompt.appendChild(inputGridSize);
 
-
+        return prompt;
 
 
     }
