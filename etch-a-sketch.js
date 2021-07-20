@@ -183,14 +183,14 @@ let numberOfSquares = 16;
 
         // Custom Grid - Depending on specified size 
 
-        container.setAttribute('style', 'grid-template-rows: repeat('+ Math.floor(gridSize/numberOfSquares) + ', + '+ numberOfSquares +'px); grid-template-columns: repeat(' + Math.floor(gridSize/numberOfSquares) + ', '+ numberOfSquares +'px)');
+        container.setAttribute('style', 'grid-template-rows: repeat('+ numberOfSquares + ', + '+ Math.floor(gridSize/numberOfSquares) +'px); grid-template-columns: repeat(' + numberOfSquares + ', '+ Math.floor(gridSize/numberOfSquares) +'px)');
 
 
         // Create Div in Grid ✅
 
-        for(i=1; i<=(Math.floor(gridSize/numberOfSquares))*(Math.floor(gridSize/numberOfSquares)); i++){
+        for(i=1; i<=(numberOfSquares*numberOfSquares); i++){
             const div = document.createElement('div');
-            div.setAttribute('style', 'border: 1px solid black; height: '+ (numberOfSquares - 1) +'px; width: '+ (numberOfSquares - 1) +'px');
+            div.setAttribute('style', 'border: 1px solid black; height: '+ (Math.floor(gridSize/numberOfSquares) - 1) +'px; width: '+ (Math.floor(gridSize/numberOfSquares) - 1) +'px');
             div.classList.add('sketchPixel')
             container.appendChild(div);
         }
