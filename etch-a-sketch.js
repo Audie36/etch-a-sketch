@@ -18,7 +18,11 @@ let options = document.querySelector('#options');
 
 let backgroundDiv = document.querySelector('#background');
 
-// Set grid dimensions ✅
+// Set grid dimensions 
+
+let gridSize = 960;
+
+// Set pixel dimensions ✅
 
 let pixelSize = 16;
 
@@ -35,7 +39,7 @@ let pixelSize = 16;
 
     // Create Grid - Inside Container Div
 
-    buildGrid (pixelSize, container);
+    buildGrid (pixelSize, gridSize, container);
 
     // MAKE OPTION CLICKABLE
 
@@ -140,7 +144,7 @@ let pixelSize = 16;
 
     // Create Grid Function - Custom size ✅
 
-    function buildGrid (pixelSize, container) {
+    function buildGrid (pixelSize, gridSize, container) {
 
 
         // Change size of container div - depending on size entered ✅
@@ -148,16 +152,16 @@ let pixelSize = 16;
         // container.setAttribute('style', 'grid-template-rows: repeat('+ size + ', 20px); grid-template-columns: repeat(' + size + ', 20px)');
 
 
-        // Custom Grid - Depending on specified size
+        // Custom Grid - Depending on specified size 
 
-        container.setAttribute('style', 'grid-template-rows: repeat('+ pixelSize + ', 20px); grid-template-columns: repeat(' + pixelSize + ', 20px)');
+        container.setAttribute('style', 'grid-template-rows: repeat('+ gridSize/pixelSize + ', + '+ pixelSize +'px); grid-template-columns: repeat(' + gridSize/pixelSize + ', '+ pixelSize +'px)');
 
 
         // Create Div in Grid ✅
 
-        for(i=1; i<=(pixelSize*pixelSize); i++){
+        for(i=1; i<=gridSize; i++){
             const div = document.createElement('div');
-            div.setAttribute('style', 'border: 1px solid black; height: 19px; width: 19px');
+            div.setAttribute('style', 'border: 1px solid black; height: '+ (pixelSize - 1) +'px; width: '+ (pixelSize - 1) +'px');
             div.classList.add('sketchPixel')
             container.appendChild(div);
         }
