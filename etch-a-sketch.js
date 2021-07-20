@@ -24,7 +24,7 @@ let gridSize = 960;
 
 // Set pixel dimensions ✅
 
-let pixelSize = 16;
+let pixelSize = 100;
 
 // OPTIONS
 
@@ -154,7 +154,7 @@ let pixelSize = 16;
 
         // Custom Grid - Depending on specified size 
 
-        container.setAttribute('style', 'grid-template-rows: repeat('+ gridSize/pixelSize + ', + '+ pixelSize +'px); grid-template-columns: repeat(' + gridSize/pixelSize + ', '+ pixelSize +'px)');
+        container.setAttribute('style', 'grid-template-rows: repeat('+ Math.floor(gridSize/pixelSize) + ', + '+ pixelSize +'px); grid-template-columns: repeat(' + Math.floor(gridSize/pixelSize) + ', '+ pixelSize +'px)');
 
 
         // Create Div in Grid ✅
