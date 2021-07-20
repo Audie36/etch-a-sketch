@@ -18,13 +18,13 @@ let options = document.querySelector('#options');
 
 let backgroundDiv = document.querySelector('#background');
 
-// Set grid dimensions 
+// Set container grid dimensions 
 
 let gridSize = 960;
 
 // Set pixel dimensions ✅
 
-let pixelSize = 100;
+let pixelSize = 16;
 
 // OPTIONS
 
@@ -71,15 +71,44 @@ let pixelSize = 100;
         prompt.textContent = "What do you want to change the grid size to?";
         backgroundDiv.insertBefore(prompt, container);
 
-        // Add input space for new Grid Size
+        const inputDiv = document.createElement('div');
 
-        let inputGridSize = document.createElement('input');
+        inputDiv.setAttribute('style', 'display: flex; align-items: center; justify-content: center; margin 20px');
+        prompt.appendChild(inputDiv);
 
-        inputGridSize.setAttribute('style', 'border-radius: 5px; border: 1px solid black; margin: 20px; padding: 10px; text-align: center');
-        inputGridSize.setAttribute('type', 'text');
-        inputGridSize.setAttribute('placeholder', 'Change Grid Size - Must be below "100"');
+        //Input - # of Squares per Side
 
-        prompt.appendChild(inputGridSize);
+        let sizeOfGrid = document.createElement('input');
+
+        sizeOfGrid.setAttribute('style', 'border-radius: 5px; border: 1px solid black; margin: 5px; padding: 10px; text-align: center');
+        sizeOfGrid.setAttribute('type', 'text');
+        sizeOfGrid.setAttribute('placeholder', 'Size - Below "100"');
+
+        inputDiv.appendChild(sizeOfGrid);
+
+        
+
+        /*
+        // Input - # of Squares High
+
+        let gridHeight = document.createElement('input');
+
+        gridHeight.setAttribute('style', 'border-radius: 5px; border: 1px solid black; margin: 5px; padding: 10px; text-align: center');
+        gridHeight.setAttribute('type', 'text');
+        gridHeight.setAttribute('placeholder', 'Height - Below "100"');
+
+        inputDiv.appendChild(gridHeight);
+
+        // Input - # of Squares Wide
+
+        let gridWidth = document.createElement('input');
+
+        gridWidth.setAttribute('style', 'border-radius: 5px; border: 1px solid black; margin: 5px; padding: 10px; text-align: center');
+        gridWidth.setAttribute('type', 'text');
+        gridWidth.setAttribute('placeholder', 'Width - Below "100"');
+
+        inputDiv.appendChild(gridWidth);
+        */
 
         // Add OK button to prompt ✅
 
@@ -92,7 +121,7 @@ let pixelSize = 100;
 
         // On button click - recreate grid with new size
 
-        okButton.addEventListener("click", )
+        //okButton.addEventListener("click", )
 
 
         return prompt;
