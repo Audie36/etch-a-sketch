@@ -183,7 +183,7 @@ let numberOfSquares = 16;
 
         // Custom Grid - Depending on specified size 
 
-        container.setAttribute('style', 'grid-template-rows: repeat('+  + ', + '+ numberOfSquares +'px); grid-template-columns: repeat(' + Math.floor(gridSize/numberOfSquares) + ', '+ numberOfSquares +'px)');
+        container.setAttribute('style', 'grid-template-rows: repeat('+ Math.floor(gridSize/numberOfSquares) + ', + '+ numberOfSquares +'px); grid-template-columns: repeat(' + Math.floor(gridSize/numberOfSquares) + ', '+ numberOfSquares +'px)');
 
 
         // Create Div in Grid ✅
