@@ -159,7 +159,7 @@ let pixelSize = 100;
 
         // Create Div in Grid ✅
 
-        for(i=1; i<=gridSize; i++){
+        for(i=1; i<=(Math.floor(gridSize/pixelSize))*(Math.floor(gridSize/pixelSize)); i++){
             const div = document.createElement('div');
             div.setAttribute('style', 'border: 1px solid black; height: '+ (pixelSize - 1) +'px; width: '+ (pixelSize - 1) +'px');
             div.classList.add('sketchPixel')
