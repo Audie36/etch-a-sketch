@@ -73,9 +73,16 @@ let size = 16;
 
         inputGridSize.setAttribute('style', 'border-radius: 5px; border: 1px solid black; margin: 20px; padding: 10px; text-align: center');
         inputGridSize.setAttribute('type', 'text');
-        inputGridSize.setAttribute('placeholder', 'Change Grid Size - Ex. "16"');
+        inputGridSize.setAttribute('placeholder', 'Change Grid Size - Must be below "100"');
 
         prompt.appendChild(inputGridSize);
+
+        // Add OK button
+
+        let okButton = document.createElement('button');
+
+        okButton.classList.add('button');
+
 
         return prompt;
 
