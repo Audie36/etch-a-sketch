@@ -24,7 +24,7 @@ let gridSize = 960;
 
 // Set pixel dimensions ✅
 
-let pixelSize = 16;
+let numberOfSquares = 16;
 
 // OPTIONS
 
@@ -39,7 +39,7 @@ let pixelSize = 16;
 
     // Create Grid - Inside Container Div
 
-    buildGrid (pixelSize, gridSize, container);
+    buildGrid (numberOfSquares, gridSize, container);
 
     // MAKE OPTION CLICKABLE
 
@@ -173,7 +173,7 @@ let pixelSize = 16;
 
     // Create Grid Function - Custom size ✅
 
-    function buildGrid (pixelSize, gridSize, container) {
+    function buildGrid (numberOfSquares, gridSize, container) {
 
 
         // Change size of container div - depending on size entered ✅
@@ -183,14 +183,14 @@ let pixelSize = 16;
 
         // Custom Grid - Depending on specified size 
 
-        container.setAttribute('style', 'grid-template-rows: repeat('+ Math.floor(gridSize/pixelSize) + ', + '+ pixelSize +'px); grid-template-columns: repeat(' + Math.floor(gridSize/pixelSize) + ', '+ pixelSize +'px)');
+        container.setAttribute('style', 'grid-template-rows: repeat('+  + ', + '+ numberOfSquares +'px); grid-template-columns: repeat(' + Math.floor(gridSize/numberOfSquares) + ', '+ numberOfSquares +'px)');
 
 
         // Create Div in Grid ✅
 
-        for(i=1; i<=(Math.floor(gridSize/pixelSize))*(Math.floor(gridSize/pixelSize)); i++){
+        for(i=1; i<=(Math.floor(gridSize/numberOfSquares))*(Math.floor(gridSize/numberOfSquares)); i++){
             const div = document.createElement('div');
-            div.setAttribute('style', 'border: 1px solid black; height: '+ (pixelSize - 1) +'px; width: '+ (pixelSize - 1) +'px');
+            div.setAttribute('style', 'border: 1px solid black; height: '+ (numberOfSquares - 1) +'px; width: '+ (numberOfSquares - 1) +'px');
             div.classList.add('sketchPixel')
             container.appendChild(div);
         }
