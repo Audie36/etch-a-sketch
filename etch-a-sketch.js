@@ -82,6 +82,9 @@ let size = 16;
         let okButton = document.createElement('button');
 
         okButton.classList.add('button');
+        okButton.textContent = "OK";
+        
+        prompt.appendChild(okButton);
 
 
         return prompt;
