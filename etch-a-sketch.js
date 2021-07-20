@@ -20,7 +20,7 @@ let backgroundDiv = document.querySelector('#background');
 
 // Set grid dimensions ✅
 
-let size = 16;
+let pixelSize = 16;
 
 // OPTIONS
 
@@ -35,7 +35,7 @@ let size = 16;
 
     // Create Grid - Inside Container Div
 
-    buildGrid (size, container);
+    buildGrid (pixelSize, container);
 
     // MAKE OPTION CLICKABLE
 
@@ -77,7 +77,7 @@ let size = 16;
 
         prompt.appendChild(inputGridSize);
 
-        // Add OK button
+        // Add OK button to prompt ✅
 
         let okButton = document.createElement('button');
 
@@ -85,6 +85,10 @@ let size = 16;
         okButton.textContent = "OK";
         
         prompt.appendChild(okButton);
+
+        // On button click - recreate grid with new size
+
+        okButton.addEventListener("click", )
 
 
         return prompt;
@@ -136,7 +140,7 @@ let size = 16;
 
     // Create Grid Function - Custom size ✅
 
-    function buildGrid (size, container) {
+    function buildGrid (pixelSize, container) {
 
 
         // Change size of container div - depending on size entered ✅
@@ -146,12 +150,12 @@ let size = 16;
 
         // Custom Grid - Depending on specified size
 
-        container.setAttribute('style', 'grid-template-rows: repeat('+ size + ', 20px); grid-template-columns: repeat(' + size + ', 20px)');
+        container.setAttribute('style', 'grid-template-rows: repeat('+ pixelSize + ', 20px); grid-template-columns: repeat(' + pixelSize + ', 20px)');
 
 
         // Create Div in Grid ✅
 
-        for(i=1; i<=(size*size); i++){
+        for(i=1; i<=(pixelSize*pixelSize); i++){
             const div = document.createElement('div');
             div.setAttribute('style', 'border: 1px solid black; height: 19px; width: 19px');
             div.classList.add('sketchPixel')
