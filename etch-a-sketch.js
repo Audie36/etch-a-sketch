@@ -82,6 +82,7 @@ let numberOfSquares = 16;
 
         sizeOfGrid.setAttribute('style', 'border-radius: 5px; border: 1px solid black; margin: 20px 0px; padding: 10px; text-align: center; width: 150px');
         sizeOfGrid.setAttribute('type', 'text');
+        sizeOfGrid.setAttribute('id', 'gridInput');
         sizeOfGrid.setAttribute('placeholder', '# of Squares - Below 100');
 
         inputDiv.appendChild(sizeOfGrid);
@@ -124,15 +125,28 @@ let numberOfSquares = 16;
 
        // Validate input value when clicking "Ok"
 
-       okButton.addEventListener('click', function validate(sizeOfGrid){
+        okButton.addEventListener('click', function validate(){
 
-        // If nothing entered, alert that nothing was entered
+            // Change from string to int
 
-        if (sizeOfGrid.value == null){
-            alert('No new value was entered, please add a new value before running');
-        }
-    
-    });
+            let newSizeGrid = document.querySelector('#gridInput').value;
+
+            console.log("First sizeOfGrid" + newSizeGrid);
+
+            newSizeGrid = parseInt(newSizeGrid, 10);
+
+            console.log(newSizeGrid);
+
+            // If nothing entered, alert that nothing was entered
+
+            if (newSizeGrid == null){
+                alert('No new value was entered, please add a new value before running');
+            }
+            else if (newSizeGrid > 100){
+                alert("Value can't be over 100");
+            }
+
+        });
         
 
     };
