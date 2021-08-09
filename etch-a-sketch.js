@@ -80,7 +80,7 @@ let numberOfSquares = 16;
 
         let sizeOfGrid = document.createElement('input');
 
-        sizeOfGrid.setAttribute('style', 'border-radius: 5px; border: 1px solid black; margin: 5px; padding: 10px; text-align: center; width: 300px');
+        sizeOfGrid.setAttribute('style', 'border-radius: 5px; border: 1px solid black; margin: 5px; padding: 10px; text-align: center; width: 150px');
         sizeOfGrid.setAttribute('type', 'text');
         sizeOfGrid.setAttribute('placeholder', '# of Squares - Below 100');
 
