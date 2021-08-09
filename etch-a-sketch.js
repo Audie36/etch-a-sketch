@@ -120,16 +120,9 @@ let numberOfSquares = 16;
         
         inputDiv.appendChild(okButton);
 
-        // On button click - recreate grid with new size
-
-        //okButton.addEventListener("click", buildGrid)
-
-
-
-        return prompt;
-
-
-    }
+        return prompt, inputDiv, sizeOfGrid, okButton;
+        
+    };
 
 // COLOR
 
@@ -167,10 +160,6 @@ let numberOfSquares = 16;
             return resetButton;
 
         }
-
-        // Reset Grid with new dimensions
-
-
 
 
 // GRID
