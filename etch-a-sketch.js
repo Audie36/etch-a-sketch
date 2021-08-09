@@ -20,7 +20,7 @@ let backgroundDiv = document.querySelector('#background');
 
 // Set container grid dimensions 
 
-let gridSize = 960;
+// let gridSize = 960;
 
 // Set pixel dimensions ✅
 
@@ -39,7 +39,7 @@ let numberOfSquares = 16;
 
     // Create Grid - Inside Container Div
 
-    buildGrid (numberOfSquares, gridSize, container);
+    buildGrid (numberOfSquares, container);
 
     // MAKE OPTION CLICKABLE
 
@@ -122,7 +122,8 @@ let numberOfSquares = 16;
 
         // On button click - recreate grid with new size
 
-        //okButton.addEventListener("click", )
+        //okButton.addEventListener("click", buildGrid)
+
 
 
         return prompt;
@@ -167,6 +168,8 @@ let numberOfSquares = 16;
 
         }
 
+        // Reset Grid with new dimensions
+
 
 
 
@@ -174,8 +177,9 @@ let numberOfSquares = 16;
 
     // Create Grid Function - Custom size ✅
 
-    function buildGrid (numberOfSquares, gridSize, container) {
+    function buildGrid (numberOfSquares, container) {
 
+        let gridSize = 960;
 
         // Change size of container div - depending on size entered ✅
 
