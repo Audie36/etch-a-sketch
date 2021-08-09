@@ -73,7 +73,7 @@ let numberOfSquares = 16;
 
         const inputDiv = document.createElement('div');
 
-        inputDiv.setAttribute('style', 'display: flex; align-items: center; justify-content: center; margin 20px');
+        inputDiv.setAttribute('style', 'display: grid; align-items: stretch; justify-items: center; margin 20px');
         prompt.appendChild(inputDiv);
 
         //Input - # of Squares per Side
@@ -116,9 +116,9 @@ let numberOfSquares = 16;
 
         okButton.classList.add('button');
         okButton.textContent = "OK";
-        okButton.setAttribute('style', 'display: flex; align-items: center; justify-content: center; width: 50px; ');
+        okButton.setAttribute('style', 'width: 50px; ');
         
-        prompt.appendChild(okButton);
+        inputDiv.appendChild(okButton);
 
         // On button click - recreate grid with new size
 
