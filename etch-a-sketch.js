@@ -80,7 +80,7 @@ let numberOfSquares = 16;
 
         let sizeOfGrid = document.createElement('input');
 
-        sizeOfGrid.setAttribute('style', 'border-radius: 5px; border: 1px solid black; margin: 5px; padding: 10px; text-align: center; width: 150px');
+        sizeOfGrid.setAttribute('style', 'border-radius: 5px; border: 1px solid black; margin: 20px 0px; padding: 10px; text-align: center; width: 150px');
         sizeOfGrid.setAttribute('type', 'text');
         sizeOfGrid.setAttribute('placeholder', '# of Squares - Below 100');
 
@@ -116,6 +116,7 @@ let numberOfSquares = 16;
 
         okButton.classList.add('button');
         okButton.textContent = "OK";
+        okButton.setAttribute('style', 'display: flex; align-items: center; justify-content: center; width: 50px; ');
         
         prompt.appendChild(okButton);
 
