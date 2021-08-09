@@ -112,7 +112,7 @@ let numberOfSquares = 16;
 
         // Add OK button to prompt ✅
 
-        let okButton = document.createElement('button');
+        const okButton = document.createElement('button');
 
         okButton.classList.add('button');
         okButton.textContent = "OK";
@@ -120,8 +120,21 @@ let numberOfSquares = 16;
         
         inputDiv.appendChild(okButton);
 
-        return prompt, inputDiv, sizeOfGrid, okButton;
+    // CLICK OK BUTTON
+
+       // Validate input value when clicking "Ok"
+
+       okButton.addEventListener('click', function validate(sizeOfGrid){
+
+        // If nothing entered, alert that nothing was entered
+
+        if (sizeOfGrid.value == null){
+            alert('No new value was entered, please add a new value before running');
+        }
+    
+    });
         
+
     };
 
 // COLOR
@@ -160,6 +173,8 @@ let numberOfSquares = 16;
             return resetButton;
 
         }
+
+ 
 
 
 // GRID
