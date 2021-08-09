@@ -68,10 +68,26 @@ let numberOfSquares = 16;
 
         const prompt = document.createElement('div');
             
-        prompt.setAttribute('style', 'display: grid; align-items: center; justify-content: center; background-color: #fefefe; margin: auto; padding: 20px; border: 1px solid #888;  border-radius: 5px; z-index: 2; width: 40%; text-align: center');
+        prompt.setAttribute('style', 'background-color: #fefefe; margin: auto; padding: 20px; border: 1px solid #888;  border-radius: 5px; z-index: 2; width: 40%');
         prompt.setAttribute('id', 'promptMessage');
         backgroundDiv.insertBefore(prompt, container);
 
+        // Create X to close the box
+
+        const closeX = document.createElement('span');
+        closeX.innerHTML = "&times;";
+        closeX.classList.add('close');
+
+        prompt.appendChild(closeX);
+
+        //prompt.insertBefore(closeDiv, promptText);
+        
+        // Prompt Contents
+
+        const promptContent = document.createElement('div');
+        promptContent.setAttribute('style', 'display: grid; align-items: center; justify-content: center; background-color: #fefefe; z-index: 2; text-align: center');
+
+        prompt.appendChild(promptContent);
 
         // Add Div - Text - Prompt for size
 
@@ -79,17 +95,14 @@ let numberOfSquares = 16;
 
         promptText.textContent = "What do you want to change the grid size to?";
 
-        prompt.appendChild(promptText);
-
-
-
+        promptContent.appendChild(promptText);
 
         // Create Input Div
 
         const inputDiv = document.createElement('div');
 
         inputDiv.setAttribute('style', 'display: grid; align-items: stretch; justify-items: center; margin 20px');
-        prompt.appendChild(inputDiv);
+        promptContent.appendChild(inputDiv);
 
         //Input - # of Squares per Side ✅
 
