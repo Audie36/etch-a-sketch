@@ -137,13 +137,27 @@ let numberOfSquares = 16;
 
             console.log(newSizeGrid);
 
-            // If nothing entered, alert that nothing was entered
+            // If nothing entered, alert that nothing was entered ✅
 
             if (newSizeGrid == null){
                 alert('No new value was entered, please add a new value before running');
             }
             else if (newSizeGrid > 100){
                 alert("Value can't be over 100");
+            }
+            else {
+
+                // Select ALL current divs in current grid ✅
+
+                let gridDivs = container.querySelectorAll('.sketchPixel');
+
+                // Delete ALL current divs in current grid ✅
+
+                gridDivs.forEach(div => container.removeChild(div));
+
+                // Create new grid off of new values ✅
+
+                buildGrid(newSizeGrid, container);
             }
 
         });
