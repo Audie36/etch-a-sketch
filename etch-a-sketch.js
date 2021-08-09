@@ -80,9 +80,9 @@ let numberOfSquares = 16;
 
         let sizeOfGrid = document.createElement('input');
 
-        sizeOfGrid.setAttribute('style', 'border-radius: 5px; border: 1px solid black; margin: 5px; padding: 10px; text-align: center');
+        sizeOfGrid.setAttribute('style', 'border-radius: 5px; border: 1px solid black; margin: 5px; padding: 10px; text-align: center; width: 500px');
         sizeOfGrid.setAttribute('type', 'text');
-        sizeOfGrid.setAttribute('placeholder', 'Size - Below "100"');
+        sizeOfGrid.setAttribute('placeholder', '# of Squares - Below 100');
 
         inputDiv.appendChild(sizeOfGrid);
 
@@ -207,3 +207,4 @@ let numberOfSquares = 16;
         function blackWhite(e){
             e.target.style.backgroundColor = "black";
         }
+
