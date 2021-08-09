@@ -28,3 +28,11 @@ body{
     background-color: #cc1818;
     color: #FFB845
 }
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }

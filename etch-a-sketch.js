@@ -60,23 +60,38 @@ let numberOfSquares = 16;
 
         // Gray out Background
 
-        backgroundDiv.setAttribute('style', 'display: block; position: fixed; z-index: 1; width: 100%; height: 100%; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4)');
+        backgroundDiv.setAttribute('style', 'display: block; position: fixed; z-index: 1; left: 0; top: 0; width: 100%; height: 100%; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4)');
+    
+    // BUILD MODAL
 
-        // Create Pop up Message on Top of Screen
+        // Create Pop up Message on Top of Screen ✅
 
         const prompt = document.createElement('div');
             
         prompt.setAttribute('style', 'display: grid; align-items: center; justify-content: center; background-color: #fefefe; margin: auto; padding: 20px; border: 1px solid #888;  border-radius: 5px; z-index: 2; width: 40%; text-align: center');
         prompt.setAttribute('id', 'promptMessage');
-        prompt.textContent = "What do you want to change the grid size to?";
         backgroundDiv.insertBefore(prompt, container);
+
+
+        // Add Div - Text - Prompt for size
+
+        let promptText = document.createElement('div');
+
+        promptText.textContent = "What do you want to change the grid size to?";
+
+        prompt.appendChild(promptText);
+
+
+
+
+        // Create Input Div
 
         const inputDiv = document.createElement('div');
 
         inputDiv.setAttribute('style', 'display: grid; align-items: stretch; justify-items: center; margin 20px');
         prompt.appendChild(inputDiv);
 
-        //Input - # of Squares per Side
+        //Input - # of Squares per Side ✅
 
         let sizeOfGrid = document.createElement('input');
 
@@ -86,30 +101,6 @@ let numberOfSquares = 16;
         sizeOfGrid.setAttribute('placeholder', '# of Squares - Below 100');
 
         inputDiv.appendChild(sizeOfGrid);
-
-        
-
-        /*
-        // Input - # of Squares High
-
-        let gridHeight = document.createElement('input');
-
-        gridHeight.setAttribute('style', 'border-radius: 5px; border: 1px solid black; margin: 5px; padding: 10px; text-align: center');
-        gridHeight.setAttribute('type', 'text');
-        gridHeight.setAttribute('placeholder', 'Height - Below "100"');
-
-        inputDiv.appendChild(gridHeight);
-
-        // Input - # of Squares Wide
-
-        let gridWidth = document.createElement('input');
-
-        gridWidth.setAttribute('style', 'border-radius: 5px; border: 1px solid black; margin: 5px; padding: 10px; text-align: center');
-        gridWidth.setAttribute('type', 'text');
-        gridWidth.setAttribute('placeholder', 'Width - Below "100"');
-
-        inputDiv.appendChild(gridWidth);
-        */
 
         // Add OK button to prompt ✅
 
@@ -131,11 +122,7 @@ let numberOfSquares = 16;
 
             let newSizeGrid = document.querySelector('#gridInput').value;
 
-            console.log("First sizeOfGrid" + newSizeGrid);
-
             newSizeGrid = parseInt(newSizeGrid, 10);
-
-            console.log(newSizeGrid);
 
             // If nothing entered, alert that nothing was entered ✅
 
@@ -162,6 +149,9 @@ let numberOfSquares = 16;
 
         });
         
+    // CLOSE OUT OF PROMPT MESSAGE
+
+    
 
     };
 
