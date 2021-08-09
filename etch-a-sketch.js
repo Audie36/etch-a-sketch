@@ -66,7 +66,7 @@ let numberOfSquares = 16;
 
         const prompt = document.createElement('div');
             
-        prompt.setAttribute('style', 'display: grid; align-items: center; justify-content: center; background-color: #fefefe; margin: auto; padding: 20px; border: 1px solid #888;  border-radius: 5px; z-index: 2; width: 80%');
+        prompt.setAttribute('style', 'display: grid; align-items: center; justify-content: center; background-color: #fefefe; margin: auto; padding: 20px; border: 1px solid #888;  border-radius: 5px; z-index: 2; width: 80%; text-align: center');
         prompt.setAttribute('id', 'promptMessage');
         prompt.textContent = "What do you want to change the grid size to?";
         backgroundDiv.insertBefore(prompt, container);
