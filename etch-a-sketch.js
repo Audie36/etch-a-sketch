@@ -32,35 +32,8 @@ let numberOfSquares = 16;
 
     addOptionButtons(options);
 
-// SELECT COLOR BUTTONS
+// SELECTABLE BUTTONS
 
-let button = document.getElementsByClassName('roundButton');
-
-    // Start with Black selected
-
-    bwButton.classList.add('selected');
-
-    // Selection - Function
-
-    let addSelectClass = function(){
-        // Call Remove Selection Function
-        removeSelectClass();
-        // Select Button
-        this.classList.add('selected');	
-    }
-
-    // Remove Selection - Function.  Remove selection
-
-    let removeSelectClass = function(){
-        for (let i =0; i < button.length; i++) {
-            button[i].classList.remove('selected')
-        }
-    }
-
-    // Run Selection Function - When button clicked
-    for (let i =0; i < button.length; i++) {
-        button[i].addEventListener("click",addSelectClass);
-    }
 
 
 // ETCH-A-SKETCH IMAGE
@@ -285,7 +258,35 @@ let button = document.getElementsByClassName('roundButton');
 
         }
 
+// SELECT COLOR BUTTONS
 
+let button = document.getElementsByClassName('roundButton');
+
+    // Start with Black selected
+
+    bwButton.classList.add('selected');
+
+    // Selection - Function
+
+    let addSelectClass = function(){
+        // Call Remove Selection Function
+        removeSelectClass();
+        // Select Button
+        this.classList.add('selected');	
+    }
+
+    // Remove Selection - Function.  Remove selection
+
+    let removeSelectClass = function(){
+        for (let i =0; i < button.length; i++) {
+            button[i].classList.remove('selected')
+        }
+    }
+
+    // Run Selection Function - When button clicked
+    for (let i =0; i < button.length; i++) {
+        button[i].addEventListener("click",addSelectClass);
+    }
     
 
 
