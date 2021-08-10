@@ -30,6 +30,8 @@ body{
     color: #FFB845
 }
 .roundButton{
+    height: 80px;
+    width: 80px;
     border: 5px solid #cc1818; 
     padding: 10px; 
     border-radius: 7px; 

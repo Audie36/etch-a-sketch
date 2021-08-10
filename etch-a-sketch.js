@@ -47,13 +47,6 @@ let numberOfSquares = 16;
 
         resetButton.addEventListener("click", promptForGridSize);
 
-       
-        /* function displayConsole(){
-
-            console.log("Reset button clicked");
-
-        */
-
     // RESET Prompt for Size
 
     function promptForGridSize(){
