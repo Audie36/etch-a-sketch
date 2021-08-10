@@ -172,7 +172,20 @@ let numberOfSquares = 16;
         
     // CLOSE OUT OF PROMPT MESSAGE
 
-    
+        // When the user clicks on <span> (x), close the modal
+        closeX.onclick = function() {
+            prompt.style.display = "none";
+            backgroundDiv.style.backgroundColor = "white";
+        }
+  
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == backgroundDiv) {
+
+                prompt.style.display = "none";
+                backgroundDiv.style.backgroundColor = "white";
+            }
+        }
 
     };
 
@@ -243,9 +256,6 @@ let numberOfSquares = 16;
             container.appendChild(div);
         }
     }
-
-// RESET - CHANGE GRID SIZE
-
 
 
 // COLOR
