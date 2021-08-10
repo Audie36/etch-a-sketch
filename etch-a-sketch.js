@@ -214,30 +214,30 @@ let numberOfSquares = 16;
 
             // Add Black & White Button
 
-            const blackWhite = document.createElement('button');
-            blackWhite.classList.add('roundButton');
-            blackWhite.setAttribute('id', 'bwButton');
-            blackWhite.textContent = "Black";
+            const bwButton = document.createElement('button');
+            bwButton.classList.add('roundButton');
+            bwButton.setAttribute('id', 'bwButton');
+            bwButton.textContent = "Black";
             
-            optionDiv.appendChild(blackWhite);
+            optionDiv.appendChild(bwButton);
 
             // Add Random Color Button
 
-            const color = document.createElement('button');
-            color.classList.add('roundButton');
-            color.setAttribute('id', 'colorButton');
-            color.textContent = "Color";
+            const colorButton = document.createElement('button');
+            colorButton.classList.add('roundButton');
+            colorButton.setAttribute('id', 'colorButton');
+            colorButton.textContent = "Color";
             
-            optionDiv.appendChild(color);
+            optionDiv.appendChild(colorButton);
 
             // Add Gray Scale Button
 
-            const gray = document.createElement('button');
-            gray.classList.add('roundButton');
-            gray.setAttribute('id', 'grayButton');
-            gray.textContent = "Gray";
+            const grayButton = document.createElement('button');
+            grayButton.classList.add('roundButton');
+            grayButton.setAttribute('id', 'grayButton');
+            grayButton.textContent = "Gray";
             
-            optionDiv.appendChild(gray);
+            optionDiv.appendChild(grayButton);
 
 
             // Add RESET Button ✅
@@ -250,16 +250,7 @@ let numberOfSquares = 16;
             
             options.appendChild(resetButton);
 
-
-
-
-
-
-
-
-
-
-            return resetButton;
+            return bwButton, colorButton, grayButton, resetButton;
 
         }
 
