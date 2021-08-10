@@ -291,8 +291,6 @@ buttons.forEach(roundButton => roundButton.addEventListener('click', addSelectCl
     }
 */    
 
-
-
 // GRID
 
     // Create Grid Function - Custom size ✅
