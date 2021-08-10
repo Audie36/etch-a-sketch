@@ -289,7 +289,7 @@ buttons.forEach(roundButton => roundButton.addEventListener('click', addSelectCl
     for (let i =0; i < button.length; i++) {
         button[i].addEventListener("click",addSelectClass);
     }
-*/    
+*/    /*Test*/
 
 // GRID
 
