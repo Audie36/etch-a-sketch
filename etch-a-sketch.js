@@ -68,24 +68,31 @@ let numberOfSquares = 16;
 
         const prompt = document.createElement('div');
             
-        prompt.setAttribute('style', 'background-color: #fefefe; margin: auto; padding: 20px; border: 1px solid #888;  border-radius: 5px; z-index: 2; width: 40%');
+        prompt.setAttribute('style', 'background-color: #fefefe; margin: auto; padding: 10px; border: 1px solid #888;  border-radius: 5px; z-index: 2; width: 40%');
         prompt.setAttribute('id', 'promptMessage');
         backgroundDiv.insertBefore(prompt, container);
 
         // Create X to close the box
 
-        const closeX = document.createElement('span');
-        closeX.innerHTML = "&times;";
-        closeX.classList.add('close');
+        const closeDiv = document.createElement('div');
+        closeDiv.setAttribute('style', 'display: flex; align-items: flex-start; justify-content: flex-end');
 
-        prompt.appendChild(closeX);
+
+        prompt.appendChild(closeDiv);
+
+            const closeX = document.createElement('span');
+            closeX.innerHTML = "&times;";
+            closeX.classList.add('close');
+
+        closeDiv.appendChild(closeX);
+
 
         //prompt.insertBefore(closeDiv, promptText);
         
         // Prompt Contents
 
         const promptContent = document.createElement('div');
-        promptContent.setAttribute('style', 'display: grid; align-items: center; justify-content: center; background-color: #fefefe; z-index: 2; text-align: center');
+        promptContent.setAttribute('style', 'display: grid; align-items: center; justify-content: center; background-color: #fefefe; z-index: 2; text-align: center; padding-top: 10px');
 
         prompt.appendChild(promptContent);
 
@@ -142,6 +149,7 @@ let numberOfSquares = 16;
             if (isNaN(newSizeGrid)){
                 alert('No value was entered, please add a value before running');
             }
+            // Limit Grid to less than 100 ✅
             else if (newSizeGrid > 100){
                 alert("Value can't be over 100");
             }
