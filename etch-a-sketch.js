@@ -258,6 +258,10 @@ let numberOfSquares = 16;
 
 let button = document.getElementsByClassName('roundButton');
 
+    // Start with Black selected
+
+    bwButton.classList.add('selected');
+
     // Selection - Function
 
     let addSelectClass = function(){
