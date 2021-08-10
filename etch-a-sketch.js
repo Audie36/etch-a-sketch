@@ -139,8 +139,8 @@ let numberOfSquares = 16;
 
             // If nothing entered, alert that nothing was entered ✅
 
-            if (newSizeGrid == null){
-                alert('No new value was entered, please add a new value before running');
+            if (isNaN(newSizeGrid)){
+                alert('No value was entered, please add a value before running');
             }
             else if (newSizeGrid > 100){
                 alert("Value can't be over 100");
