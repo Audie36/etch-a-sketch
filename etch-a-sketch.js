@@ -212,6 +212,24 @@ let numberOfSquares = 16;
 
         function addOptionButtons(options){
 
+            // Add Black & White Button
+
+            const blackWhite = document.createElement('button');
+            blackWhite.classList.add('roundButton');
+            blackWhite.setAttribute('id', 'bwButton');
+            blackWhite.textContent = "Black";
+            
+            options.appendChild(blackWhite);
+
+            // Add Random Color Button
+
+
+
+            // Add Gray Scale Button
+
+
+
+
             // Add RESET Button ✅
 
             const resetButton = document.createElement('button');
@@ -221,6 +239,15 @@ let numberOfSquares = 16;
 
             
             options.appendChild(resetButton);
+
+
+
+
+
+
+
+
+
 
             return resetButton;
 
