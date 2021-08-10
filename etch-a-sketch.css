@@ -32,6 +32,16 @@ body{
     color: #FFB845
 }
 
+.roundButton.selected{
+
+    border: 5px solid #a09b9b; 
+    padding: 10px; 
+    border-radius: 40px; 
+    background-color: #cc1818;
+    color: #FFB845
+
+}
+
 /* Reset Button */
 
 #resetButton{

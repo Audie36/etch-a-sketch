@@ -258,18 +258,18 @@ let numberOfSquares = 16;
 
 let button = document.getElementsByClassName('roundButton');
 
-var addSelectClass = function(){
+let addSelectClass = function(){
     removeSelectClass();
     this.classList.add('selected');	
 }
 
-var removeSelectClass = function(){
+let removeSelectClass = function(){
     for (var i =0; i < button.length; i++) {
         button[i].classList.remove('selected')
     }
 }
 
-for (var i =0; i < button.length; i++) {
+for (let i =0; i < button.length; i++) {
     button[i].addEventListener("click",addSelectClass);
 }
  
