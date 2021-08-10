@@ -20,7 +20,10 @@ body{
     padding: 10px; 
     border-radius: 7px; 
     background-color: #a09b9b;
-    color: #FFB845
+    color: #FFB845;
+    font-weight: bold;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+
 }
 .button:hover{
     border: 5px solid #a09b9b; 
@@ -32,16 +35,20 @@ body{
 .roundButton{
     height: 80px;
     width: 80px;
+    margin: 20px;
     border: 5px solid #cc1818; 
     padding: 10px; 
-    border-radius: 7px; 
+    border-radius: 40px; 
     background-color: #a09b9b;
-    color: #FFB845
+    color: #FFB845;
+    font-weight: bold;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+
 }
 .roundButton:hover{
     border: 5px solid #a09b9b; 
     padding: 10px; 
-    border-radius: 7px; 
+    border-radius: 40px; 
     background-color: #cc1818;
     color: #FFB845
 }
