@@ -32,10 +32,6 @@ let numberOfSquares = 16;
 
     addOptionButtons(options);
 
-// SELECTABLE BUTTONS
-
-
-
 // ETCH-A-SKETCH IMAGE
 
 
@@ -259,12 +255,15 @@ let numberOfSquares = 16;
         }
 
 // SELECT COLOR BUTTONS
+/*
+// Start with Black selected
 
-let button = document.getElementsByClassName('roundButton');
+bwButton.classList.add('selected');
 
-    // Start with Black selected
+// Grab all Buttons
+let buttons = document.querySelectorAll('.roundButton');
 
-    bwButton.classList.add('selected');
+
 
     // Selection - Function
 
@@ -278,16 +277,20 @@ let button = document.getElementsByClassName('roundButton');
     // Remove Selection - Function.  Remove selection
 
     let removeSelectClass = function(){
-        for (let i =0; i < button.length; i++) {
-            button[i].classList.remove('selected')
+        for (let i =0; i < buttons.length; i++) {
+            buttons[i].classList.remove('selected')
         }
     }
 
-    // Run Selection Function - When button clicked
+// Run Selection Function - When button clicked
+
+buttons.forEach(roundButton => roundButton.addEventListener('click', addSelectClass));
+
     for (let i =0; i < button.length; i++) {
         button[i].addEventListener("click",addSelectClass);
     }
-    
+*/    
+
 
 
 // GRID
