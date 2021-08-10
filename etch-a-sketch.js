@@ -212,6 +212,13 @@ let numberOfSquares = 16;
 
         function addOptionButtons(options){
 
+            // Add Div - for Color Buttons
+
+            const optionDiv = document.createElement('div');
+            optionDiv.setAttribute('style', 'display: flex; justify-content: space-around; align-items: center');
+
+            options.appendChild(optionDiv);
+
             // Add Black & White Button
 
             const blackWhite = document.createElement('button');
@@ -219,15 +226,25 @@ let numberOfSquares = 16;
             blackWhite.setAttribute('id', 'bwButton');
             blackWhite.textContent = "Black";
             
-            options.appendChild(blackWhite);
+            optionDiv.appendChild(blackWhite);
 
             // Add Random Color Button
 
-
+            const color = document.createElement('button');
+            color.classList.add('roundButton');
+            color.setAttribute('id', 'colorButton');
+            color.textContent = "Color";
+            
+            optionDiv.appendChild(color);
 
             // Add Gray Scale Button
 
-
+            const gray = document.createElement('button');
+            gray.classList.add('roundButton');
+            gray.setAttribute('id', 'grayButton');
+            gray.textContent = "Gray";
+            
+            optionDiv.appendChild(gray);
 
 
             // Add RESET Button ✅
