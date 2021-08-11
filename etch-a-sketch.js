@@ -263,6 +263,27 @@ bwButton.classList.add('selected');
 // Grab all Buttons
 let buttons = document.querySelectorAll('.roundButton');
 
+// For each color button click - change selection
+
+buttons.forEach(div => div.addEventListener('click', addSelectClass));
+
+// Add Function to Remove the current selection and perform new selection
+
+function addSelectClass(event){
+
+    // Select clicked color button
+
+    event.target.classList.add('selected');
+
+
+}
+
+// Remove Selected class from all elements
+
+
+
+
+
 /*
 
     // Selection - Function
