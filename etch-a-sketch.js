@@ -167,7 +167,8 @@ let numberOfSquares = 16;
 
         // When the user clicks on <span> (x), close the modal
         closeX.onclick = function() {
-            prompt.style.display = "none";
+            //prompt.style.display = "none";
+            backgroundDiv.removeChild(prompt);
             backgroundDiv.style.backgroundColor = "white";
         }
   
@@ -175,7 +176,8 @@ let numberOfSquares = 16;
         window.onclick = function(event) {
             if (event.target == backgroundDiv) {
 
-                prompt.style.display = "none";
+                //prompt.style.display = "none";
+                backgroundDiv.removeChild(prompt);
                 backgroundDiv.style.backgroundColor = "white";
             }
         }
