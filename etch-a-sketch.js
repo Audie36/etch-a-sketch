@@ -255,7 +255,7 @@ let numberOfSquares = 16;
         }
 
 // SELECT COLOR BUTTONS
-/*
+
 // Start with Black selected
 
 bwButton.classList.add('selected');
@@ -263,7 +263,7 @@ bwButton.classList.add('selected');
 // Grab all Buttons
 let buttons = document.querySelectorAll('.roundButton');
 
-
+/*
 
     // Selection - Function
 
