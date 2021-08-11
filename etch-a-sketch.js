@@ -158,7 +158,6 @@ let numberOfSquares = 16;
                     container.setAttribute('id', 'container');
                 */
 
-
                 
                 // Select ALL current divs in current grid ✅
                 
@@ -181,7 +180,6 @@ let numberOfSquares = 16;
 
         // When the user clicks on <span> (x), close the modal
         closeX.onclick = function() {
-            //prompt.style.display = "none";
             backgroundDiv.removeChild(prompt);
             backgroundDiv.style.backgroundColor = "white";
         }
@@ -190,7 +188,6 @@ let numberOfSquares = 16;
         window.onclick = function(event) {
             if (event.target == backgroundDiv) {
 
-                //prompt.style.display = "none";
                 backgroundDiv.removeChild(prompt);
                 backgroundDiv.style.backgroundColor = "white";
             }
@@ -282,34 +279,6 @@ function addSelectClass(event){
 
 }
 
-/*
-
-    // Selection - Function
-
-    let addSelectClass = function(){
-        // Call Remove Selection Function
-        removeSelectClass();
-        // Select Button
-        this.classList.add('selected');	
-    }
-
-    // Remove Selection - Function.  Remove selection
-
-    let removeSelectClass = function(){
-        for (let i =0; i < buttons.length; i++) {
-            buttons[i].classList.remove('selected')
-        }
-    }
-
-// Run Selection Function - When button clicked
-
-buttons.forEach(roundButton => roundButton.addEventListener('click', addSelectClass));
-
-    for (let i =0; i < button.length; i++) {
-        button[i].addEventListener("click",addSelectClass);
-    }
-*/    /*Test*/
-
 // GRID
 
     // Create Grid Function - Custom size ✅
@@ -334,10 +303,13 @@ buttons.forEach(roundButton => roundButton.addEventListener('click', addSelectCl
             div.classList.add('sketchPixel')
             container.appendChild(div);
         }
+
+        setColor();
     }
 
 // COLOR
 
+    function setColor(){
     // Event Listener - Trigger when hover over with mouse 
 
         // Identify each square ✅
@@ -352,16 +324,19 @@ buttons.forEach(roundButton => roundButton.addEventListener('click', addSelectCl
             div.addEventListener('mouseover', colorGrid);
             
         });
+    }
 
 // COLOR
     
-    // Black ✅
 
         function colorGrid(e){
 
             switch(true){
-                case bwButton.classList.contains('selected'):
+                
+                // Black ✅
 
+                case bwButton.classList.contains('selected'):
+                    
                     e.target.style.backgroundColor = "black";
 
                     break;
