@@ -148,8 +148,20 @@ let numberOfSquares = 16;
             }
             else {
 
-                // Select ALL current divs in current grid ✅
+                // Remove Current Grid
+                /*
+                    backgroundDiv.removeChild(container);
 
+                    document.createElement('container');
+                    backgroundDiv.appendChild(container);
+                    container = document.querySelector('#container');
+                    container.setAttribute('id', 'container');
+                */
+
+
+                
+                // Select ALL current divs in current grid ✅
+                
                 let gridDivs = container.querySelectorAll('.sketchPixel');
 
                 // Delete ALL current divs in current grid ✅
@@ -157,6 +169,8 @@ let numberOfSquares = 16;
                 gridDivs.forEach(div => container.removeChild(div));
 
                 // Create new grid off of new values ✅
+
+                
 
                 buildGrid(newSizeGrid, container);
             }
@@ -184,22 +198,7 @@ let numberOfSquares = 16;
 
     };
 
-// COLOR
 
-    // Event Listener - Trigger when hover over with mouse 
-
-        // Identify each square ✅
-
-            let divButtons = container.querySelectorAll('.sketchPixel');
-
-
-        // Color each div BLACK ✅
-
-        divButtons.forEach((div) => {
-            
-            div.addEventListener('mouseover', colorGrid);
-            
-        });
 
 // OPTIONS
 
@@ -281,7 +280,6 @@ function addSelectClass(event){
 
     event.target.classList.add('selected');
 
-
 }
 
 /*
@@ -322,8 +320,6 @@ buttons.forEach(roundButton => roundButton.addEventListener('click', addSelectCl
 
         // Change size of container div - depending on size entered ✅
 
-        // container.setAttribute('style', 'grid-template-rows: repeat('+ size + ', 20px); grid-template-columns: repeat(' + size + ', 20px)');
-
 
         // Custom Grid - Depending on specified size 
 
@@ -340,6 +336,22 @@ buttons.forEach(roundButton => roundButton.addEventListener('click', addSelectCl
         }
     }
 
+// COLOR
+
+    // Event Listener - Trigger when hover over with mouse 
+
+        // Identify each square ✅
+
+        let divButtons = container.querySelectorAll('.sketchPixel');
+
+
+        // Color each div BLACK ✅
+
+        divButtons.forEach((div) => {
+            
+            div.addEventListener('mouseover', colorGrid);
+            
+        });
 
 // COLOR
     
