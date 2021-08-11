@@ -233,7 +233,7 @@ let numberOfSquares = 16;
             const grayButton = document.createElement('button');
             grayButton.classList.add('roundButton');
             grayButton.setAttribute('id', 'grayButton');
-            grayButton.textContent = "Grayscale";
+            grayButton.textContent = "Gray";
             
             optionDiv.appendChild(grayButton);
 
