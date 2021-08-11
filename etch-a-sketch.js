@@ -271,18 +271,16 @@ buttons.forEach(div => div.addEventListener('click', addSelectClass));
 
 function addSelectClass(event){
 
+    // Unselect selected button
+
+    buttons.forEach(div => div.classList.remove('selected'));
+
     // Select clicked color button
 
     event.target.classList.add('selected');
 
 
 }
-
-// Remove Selected class from all elements
-
-
-
-
 
 /*
 
