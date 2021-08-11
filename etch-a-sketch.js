@@ -328,6 +328,7 @@ function addSelectClass(event){
 
 // COLOR
     
+    // Change Shade color
 
         function colorGrid(e){
 
@@ -349,12 +350,27 @@ function addSelectClass(event){
 
                 case colorButton.classList.contains('selected'):
 
-                    e.target.style.backgroundColor = "green";
+                    multiColor(e);
 
                     break;
 
             }
 
            
+        }
+
+    // MultiColor
+
+        function multiColor(e){
+
+            let x = Math.floor(Math.random() * 256);
+            let y = Math.floor(Math.random() * 256);
+            let z = Math.floor(Math.random() * 256);
+            let manyColors = "rgb(" + x + "," + y + "," + z + ")";
+
+            e.target.style.backgroundColor = manyColors;
+
+
+//            return manyColors;
         }
 
