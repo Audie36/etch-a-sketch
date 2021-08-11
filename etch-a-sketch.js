@@ -197,7 +197,7 @@ let numberOfSquares = 16;
 
         divButtons.forEach((div) => {
             
-            div.addEventListener('mouseover', blackWhite);
+            div.addEventListener('mouseover', colorGrid);
             
         });
 
@@ -345,7 +345,29 @@ buttons.forEach(roundButton => roundButton.addEventListener('click', addSelectCl
     
     // Black ✅
 
-        function blackWhite(e){
-            e.target.style.backgroundColor = "black";
+        function colorGrid(e){
+
+            switch(true){
+                case bwButton.classList.contains('selected'):
+
+                    e.target.style.backgroundColor = "black";
+
+                    break;
+
+                case grayButton.classList.contains('selected'):
+
+                    e.target.style.backgroundColor = "blue";
+
+                    break;
+
+                case colorButton.classList.contains('selected'):
+
+                    e.target.style.backgroundColor = "green";
+
+                    break;
+
+            }
+
+           
         }
 
