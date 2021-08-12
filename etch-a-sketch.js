@@ -26,6 +26,10 @@ let backgroundDiv = document.querySelector('#background');
 
 let numberOfSquares = 16;
 
+// Initialize grayColor - Start with white
+
+let grayColor = 256;
+
 // OPTIONS
 
     // Add Option Buttons
@@ -317,7 +321,7 @@ function addSelectClass(event){
         let divButtons = container.querySelectorAll('.sketchPixel');
 
 
-        // Color each div BLACK ✅
+        // Color each div BLACK, COLOR, or GRAYSCALE ✅
 
         divButtons.forEach((div) => {
             
@@ -344,7 +348,7 @@ function addSelectClass(event){
 
                 case grayButton.classList.contains('selected'):
 
-                    e.target.style.backgroundColor = "blue";
+                        grayScale(e);
 
                     break;
 
@@ -369,8 +373,22 @@ function addSelectClass(event){
             let manyColors = "rgb(" + x + "," + y + "," + z + ")";
 
             e.target.style.backgroundColor = manyColors;
+        }
+
+    // Grayscale
+
+        function grayScale(e){
 
 
-//            return manyColors;
+            
+                grayColor = grayColor - (256/10);
+
+                console.log("Current grayColor" + grayColor);
+    
+                e.target.style.backgroundColor = "rgb(" + grayColor + "," + grayColor + "," + grayColor + ")";
+    
+                console.log(e.target.style.backgroundColor);
+    
+                return grayColor;                
         }
 
