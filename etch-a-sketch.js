@@ -30,6 +30,7 @@ let numberOfSquares = 16;
 
 let grayColor = 256;
 
+
 // OPTIONS
 
     // Add Option Buttons
@@ -321,7 +322,7 @@ function addSelectClass(event){
         let divButtons = container.querySelectorAll('.sketchPixel');
 
 
-        // Color each div BLACK, COLOR, or GRAYSCALE ✅
+        // Shade square on hover ✅
 
         divButtons.forEach((div) => {
             
@@ -348,8 +349,21 @@ function addSelectClass(event){
 
                 case grayButton.classList.contains('selected'):
 
-                        grayScale(e);
+                        // Identify each square ✅
 
+                        let divButtons = container.querySelectorAll('.sketchPixel');
+
+
+                        // Shade square on hover ✅
+
+                        divButtons.forEach(div => {
+                            
+                            div.addEventListener('mouseover', grayScale);
+                            
+                        });
+
+                        //e.target.style.backgroundColor = grayScale(e);             
+                        
                     break;
 
                 case colorButton.classList.contains('selected'):
@@ -378,17 +392,26 @@ function addSelectClass(event){
     // Grayscale
 
         function grayScale(e){
-
-
             
+            let currentOpacity = Number(this.style.backgroundColor.slice(-4, -1));
+                if (currentOpacity <= 0.9) {
+                    this.style.backgroundColor = `rgba(0, 0, 0, ${currentOpacity + 0.1})`;
+
+            /*
+                let newColor;
+
                 grayColor = grayColor - (256/10);
 
                 console.log("Current grayColor" + grayColor);
     
-                e.target.style.backgroundColor = "rgb(" + grayColor + "," + grayColor + "," + grayColor + ")";
+                newColor = "rgb(" + grayColor + "," + grayColor + "," + grayColor + ")";
     
-                console.log(e.target.style.backgroundColor);
+                console.log(e.target.style.newColor);
     
-                return grayColor;                
+                return newColor;
+            */
+
+            }
         }
+                
 
